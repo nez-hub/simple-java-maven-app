@@ -3,11 +3,11 @@ pipeline {
         docker{
             image 'maven:3-alpine'
             args '-v /root/.m2:/root/.m2'
-        }
-        tools{
+        }  
+    }
+    tools{
             maven 'Maven'
         }
-    }
     stages {
         stage('Build') {
             steps {
