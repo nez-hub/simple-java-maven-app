@@ -11,6 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'mvn clean install -Denforcer.skip=true'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
